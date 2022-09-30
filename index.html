@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>FontGALLERY</title>
+</head>
+
+
+<body>
+    <div>
+    </div>
+    <h1 style="text-align: center; " >폰트 갤러리</h1>
+    <p style="text-align: center;">버튼 클릭 시 폰트가 바뀌고, 다른 폰트로 바꿀 시 재클릭후 다른 폰트를 클릭하셔야합니다.</p>
+    <!-- <button class="w-btn w-btn-indigo" type="button">
+        BUTTON
+    </button> -->
+
+	<form>
+        <input  style="font-family: 'BMJUA';" type='button' value="주아체" onclick="juaClick()"/>
+        <input  type='button' value="평창평화체" style="font-family: 'PyeongChangPeace-Light';" onclick="GmarketClick()"/>
+
+		<textarea class="area">여기에 텍스트를 입력합니다!</textarea>
+	</form>
+</body>
+<script>
+    const area =  document.querySelector(".area");
+
+    function juaClick(){
+    const clickedClass = "juaArea";
+
+  if(area.classList.contains("juaArea")){
+    area.classList.remove("juaArea");
+  } else {
+    area.classList.add("juaArea");
+  }
+}
+
+    function GmarketClick(){
+    const clickedClass = "gmarketArea";
+  if(area.classList.contains("gmarketArea")){
+    area.classList.remove("gmarketArea");
+  } else {
+    area.classList.add("gmarketArea");
+  }
+}
+
+
+
+
+ 
+
+
+</script>
+</html>
