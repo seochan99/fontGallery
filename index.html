@@ -5,52 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>FontGALLERY</title>
+    <title>NORSE MYTHOLOGY</title>
+
+
+<!-- 적용방법 2 : cdn -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 
 
 <body>
-    <div>
-    </div>
-    <h1 style="text-align: center; " >폰트 갤러리</h1>
-    <p style="text-align: center;">버튼 클릭 시 폰트가 바뀌고, 다른 폰트로 바꿀 시 재클릭후 다른 폰트를 클릭하셔야합니다.</p>
-    <!-- <button class="w-btn w-btn-indigo" type="button">
-        BUTTON
-    </button> -->
-
-	<form>
-        <input  style="font-family: 'BMJUA';" type='button' value="주아체" onclick="juaClick()"/>
-        <input  type='button' value="평창평화체" style="font-family: 'PyeongChangPeace-Light';" onclick="GmarketClick()"/>
-
-		<textarea class="area">여기에 텍스트를 입력합니다!</textarea>
+    <div style="margin:50px 50px">
+	<form style="margin:50px">
+      <div style="margin-bottom: 20px;">
+        <input type='button' value="TYR" onclick="tyrClick()"/>
+        <input type='button' value="BALDUR"onclick="BALDURAreaClick()"/>
+        <input type='button' value="LOKI" onclick="LOKIAreaClick()"/>
+        <input type='button' value="THOR" onclick="THORClick()"/>
+        <input type='button' value="HODR" onclick="HODRClick()"/>
+        <input type='button' value="FREYJA" onclick="FREYJAClick()"/>
+        <input type='button' value="GULLVEIG" onclick="GULLVEIGClick()"/>
+      </div>
+		<textarea class="area" id="areas"></textarea>
 	</form>
+</div>
 </body>
+
 <script>
-    const area =  document.querySelector(".area");
-
-    function juaClick(){
-    const clickedClass = "juaArea";
-
-  if(area.classList.contains("juaArea")){
-    area.classList.remove("juaArea");
-  } else {
-    area.classList.add("juaArea");
+      const area =  document.querySelector(".area");
+    // tyr클릭시 
+    function tyrClick(){
+    $('#areas').removeClass();
+    area.classList.add("tyrArea");
   }
+
+    // BALDUR 클릭시 
+    function BALDURAreaClick(){
+    $('#areas').removeClass();
+    area.classList.add("BALDURArea");
 }
 
-    function GmarketClick(){
-    const clickedClass = "gmarketArea";
-  if(area.classList.contains("gmarketArea")){
-    area.classList.remove("gmarketArea");
-  } else {
-    area.classList.add("gmarketArea");
-  }
+// LOKI 클릭시 
+function LOKIAreaClick(){
+    $('#areas').removeClass();
+    area.classList.add("LOKIArea");
 }
 
+// THOR 클릭시 
+function THORClick(){
+    $('#areas').removeClass();
+    area.classList.add("THORArea");
+}
 
+// BALDUR 클릭시 
+function HODRClick(){
+    $('#areas').removeClass();
+    area.classList.add("HODRArea");
+}
 
+// BALDUR 클릭시 
+function FREYJAClick(){
+    $('#areas').removeClass();
+    area.classList.add("FREYJArea");
+}
 
- 
+// BALDUR 클릭시 
+function GULLVEIGClick(){
+    $('#areas').removeClass();
+    area.classList.add("GULLVEIGArea");
+}
+
 
 
 </script>
