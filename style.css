@@ -73,6 +73,7 @@ textarea {
         border-radius: 5px;
         font-size: 180px;
         resize: both;
+        text-transform: uppercase;
     }
 
     textarea:focus {
